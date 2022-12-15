@@ -1,8 +1,12 @@
-<?php 
-    $connect = mysqli_connect('localhost','root','','rundt');
-    mysqli_set_charset($connect,'utf8');
-    if(!$connect) {
-        printf("Невозможно подключиться к бд. Код ошибки: %s\n", mysqli_connect_error());
-        exit();
+<?php
+    global $pdo;
+    $host = 'localhost';
+    $dbname = 'rundt';
+    $username = 'root';
+    $password = '';
+    try {
+        $pdo= new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    } catch (Exception $pe) {
+        echo "Ошибка";
     }
 ?>
