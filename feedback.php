@@ -2,7 +2,7 @@
     session_start();
     if(isset($_POST["FIO"]) && isset($_POST["telephone"]) && isset($_POST["opisanie"])):
         require "db.php";
-        $date = date("d.m.y H:i:s");
+        $date = date("y.m.d H.m.s");
         $sql = "INSERT INTO feedback (FIO, Phone_number, Opisanie, Datetime) VALUES (:FIO, :telephone, :opisanie, :segodna)";
         $query = $pdo->prepare($sql);
         $query->execute(array(
@@ -11,7 +11,7 @@
             "opisanie" => $_POST["opisanie"],
             "segodna" => $date
         ));
-        header("Location: http://localhost:8000/index.php");
+        header("Location: http://localhost:8000/index.html");
     else:
 ?>
 <!DOCTYPE html>
