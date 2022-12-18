@@ -5,7 +5,7 @@
     $username = 'root';
     $password = '';
     try {
-        $pdo= new PDO("mysql:host=$host;dbname=$dbname", $username, $password,'utf8');
+        $pdo= new PDO("mysql:host=$host;dbname=$dbname;charset=UTF8", $username, $password);
     } catch (Exception $pe) {
         echo "Ошибка";
     }
