@@ -6,14 +6,69 @@
 }
 
 :root {
+  --black: #141414;
   --gray: #f3f3f3;
-  --gray-tr: rgb(237,237,237,0.75);
+  --gray-tr: rgb(237, 237, 237, 0.75);
   --orange: #da9130;
-  --orange-hv: #CB7B13;
+  --orange-hv: #cb7b13;
 }
-
 
 body {
   background-color: #f7f7f7;
   font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+.header__inner ul,
+.header__inner ul li {
+  list-style: none;
+}
+
+.container .header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0 14px 0;
+}
+
+.header__inner .header__logo img {
+  max-height: 44px;
+}
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.25);
+  margin-bottom: 53px;
+}
+
+.header__container {
+  background-color: #fff;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.header__nav .nav__list-link {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header__nav .nav__list-link:hover {
+  color: var(--orange);
 }
