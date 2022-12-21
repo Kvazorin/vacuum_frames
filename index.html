@@ -47,9 +47,31 @@
       <div class="container main__container">
         <div class="main__inner">
           <section class="main__section_jumbotron section">
-            <h1 class="section_jumbotron__article article">
-              Jumbotron Article
-            </h1>
+            <div class="section_jumbotron__flex-item">
+              <img src="assets/img/jmbtrn.png" alt="jmbtrn_img" class="main__section_jumbotron__img">
+              <div class="section_jumbotron__article article">
+                <h1 class="jumbotron__article_main">
+                  Вакуумные рамки - выбор профессионалов
+                  <p class="jumbotron__article_following">
+                    Запатентованные. С защитой от подделок.
+                  </p>
+                </h1>
+                <p class="jumbotron__article_main_s">
+                  Потому что наши рамки - лучшие на рынке. Тысячи довольных
+                  клиентов и решенных задач.
+                </p>
+              </div>
+            </div>
+            <form action="" method="POST" class="form section_jumbotron__form">
+              <h4 class="form__article">
+                Оставьте заявку
+                <p class="form__article_following">И мы поможем решить <br> Вашу проблему</p>
+              </h4>
+              <input type="text" name="FIO" id="FIO" placeholder="ФИО" class="input form__input">
+              <input type="number" name="telephone" id="telephone" placeholder="Номер телефона" class="input form__input">
+              <input type="textfield" name="opisanie" id="opisanie" placeholder="Опишите проблему" class="input form__input">
+              <button type="submit" class="form__button">Отправить</button>
+            </form>
           </section>
           <section class="main__section section"></section>
           <section class="main__section section_gray"></section>
