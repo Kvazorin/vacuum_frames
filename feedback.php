@@ -12,7 +12,6 @@
             "segodna" => $date
         ));
         header("Location: http://localhost:8000/index.html");
-    else:
 ?>
 <!DOCTYPE html>
 <html lang="RU">
