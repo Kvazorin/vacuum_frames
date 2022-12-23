@@ -11,7 +11,7 @@
             "opisanie" => $_POST["opisanie"],
             "segodna" => $date
         ));
-        header("Location: http://localhost:8000/index.html");
+        header("Location: http://localhost:8000/index.php");
         endif;
 ?>
 <!DOCTYPE html>
