@@ -12,6 +12,7 @@
   --black: #141414;
   --gray: #f3f3f3;
   --gray-tr: rgb(237, 237, 237, 0.75);
+  --white: #f3f3f3;
   --orange: #da9130;
   --orange-hv: #cb7b13;
 }
@@ -22,12 +23,19 @@ body {
   background-repeat: no-repeat;
 }
 
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+ul li {
+  list-style: none;
+}
+
 .container {
   max-width: 1520px;
   margin: 0 auto;
 }
-
-/* HEADER */
 
 .header__inner ul,
 .header__inner ul li {
@@ -39,6 +47,7 @@ body {
 }
 
 .header {
+  z-index: 2;
   width: 100%;
   position: sticky;
   top: 0px;
@@ -78,10 +87,6 @@ body {
 .header__nav .nav__list-link:hover {
   color: var(--orange);
 }
-
-/* <--------------------> */
-
-/* JUMBOTRON */
 
 .inner {
   margin-bottom: 15rem;
@@ -131,10 +136,6 @@ body {
   border-radius: 20px;
 }
 
-/* <--------------------> */
-
-/* FORM */
-
 .main__section_jumbotron .section_jumbotron__form {
   padding: 25px 35px 25px 35px;
 }
@@ -157,7 +158,8 @@ body {
   font-weight: 400;
 }
 
-.section_jumbotron__form .form__button {
+.section_jumbotron__form .form__button,
+.main__section_feedback .section_feedback__btn {
   padding: 15px 35px 15px 35px;
   font-size: 1.25rem;
   font-weight: 700;
@@ -166,7 +168,8 @@ body {
   border-radius: 20px;
 }
 
-.section_jumbotron__form > button:hover {
+.section_jumbotron__form > button:hover,
+.main__section_feedback > button:hover {
   transition: 0.3s;
   background: rgba(255, 255, 255, 0);
   cursor: pointer;
@@ -196,10 +199,6 @@ body {
 .section_jumbotron__form .form__textarea {
   resize: vertical;
 }
-
-/* <--------------------> */
-
-/* SECTIONS */
 
 .main__inner_gray {
   background-color: #f3f3f3;
@@ -235,7 +234,8 @@ body {
 
 .section_qualities__subitem_1 .section_qualities__article,
 .main__section_achievements .section_achievements__article,
-.main__section_recent-jobs .section_recent-jobs__article {
+.main__section_recent-jobs .section_recent-jobs__article,
+.main__section_feedback .section_feedback__article {
   font-size: 2rem;
   line-height: 2rem;
   margin-bottom: 1.25rem;
@@ -247,11 +247,13 @@ body {
 }
 
 .main__section_qualities .section_qualities__following,
-.main__section_achievements .section_achievements__following {
+.main__section_achievements .section_achievements__following,
+.main__section_feedback .section_feedback__following {
   font-size: 1.1rem;
 }
 
-.main__section_achievements .section_achievements__following {
+.main__section_achievements .section_achievements__following,
+.main__section_feedback .section_feedback__following {
   text-align: center;
   max-width: 50%;
 }
@@ -273,6 +275,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 3.125rem;
 }
 
@@ -281,4 +284,104 @@ body {
   transform: scale(1.01);
   box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
   cursor: pointer;
+}
+
+.section_recent-jobs__slider {
+  background-color: transparent;
+  max-width: 100%;
+  margin: 0;
+}
+
+.slick-slide {
+  width: auto;
+  margin: 0 1rem 0 1rem;
+}
+
+.slick-list {
+  margin-bottom: 0.625rem;
+}
+
+.recent-jobs__slider_prev,
+.recent-jobs__slider_next {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 3rem;
+}
+
+.recent-jobs__slider_next {
+  content: url(/assets/img/arrow_r.svg);
+  right: 0;
+}
+
+.recent-jobs__slider_prev {
+  content: url(/assets/img/arrow_L.svg);
+  left: 0;
+}
+
+.slick-dots li button::before {
+  color: var(--orange);
+  font-size: 15px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--orange);
+}
+
+.footer__inner {
+  background-color: var(--orange);
+  padding: 30px 0 40px 0;
+}
+
+.footer__inner .footer__link-list,
+.footer__inner .footer__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer__inner .footer__link-list{
+  margin-bottom: 1.875rem;
+}
+
+.footer__inner .footer__list-item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.footer__inner .footer__list-item_socials {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.footer__list-item .footer__link:hover {
+  color: var(--white);
+}
+
+.footer__inner .footer__end-text {
+  text-align: center;
+  color: var(--white);
+}
+
+.footer__inner .footer__link-list .footer__list-item_socials svg:hover{
+  transition: 0.3s;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@media (max-width: 1580px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1330px) {
+  .container {
+    max-width: 1020px;
+  }
 }
