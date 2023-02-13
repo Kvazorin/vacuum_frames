@@ -46,7 +46,7 @@ endif;
               <a href="#" class="nav__list-link link">О компании</a>
             </li>
             <li class="nav__list-item">
-              <a href="#" class="nav__list-link link">Партнерам</a>
+              <a href="test.php" class="nav__list-link link">Партнерам</a>
             </li>
             <li class="nav__list-item">
               <a href="desinger.php" class="nav__list-link link">Конструктор</a>
@@ -200,7 +200,7 @@ endif;
             <a href="#" class="footer__link">О компании</a>
           </li>
           <li class="footer__list-item">
-            <a href="#" class="footer__link">Партнерам</a>
+            <a href="test.php" class="footer__link">Партнерам</a>
             <a href="#" class="footer__link">Обратная связь</a>
           </li>
           <li class="footer__list-item">

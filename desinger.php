@@ -126,16 +126,6 @@ endif;
               </div>
             </form>
           </div>
-
-
-          <!-- <button class="section__collapsible-btn">Выбор упаковки +</button>
-          <div class="section__collapsible-content">
-            <form class="section__collapsible-content__form" action="" method="post">
-              <input class="form__input" type="radio" name="course_2" value="Обычная" />обычная<br>
-              <input class="form__input" type="radio" name="course_2" value="Новогодняя" />новогодняя<br>
-            </form>
-          </div> -->
-
         </section>
 
 

@@ -25,4 +25,3 @@ $('.section_recent-jobs__slider').slick({
     dots: true
     
 });
-
