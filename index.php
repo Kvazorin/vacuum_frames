@@ -91,6 +91,7 @@ endif;
             <input type="number" name="telephone" id="telephone" placeholder="Номер телефона" class="input form__input" />
             <textarea type="textfield" name="opisanie" id="opisanie" placeholder="Опишите проблему" class="input form__input form__textarea"></textarea>
             <button type="submit" class="form__button">Отправить</button>
+            <!-- <div id="cursor"></div> -->
           </form>
         </section>
       </div>
@@ -205,7 +206,7 @@ endif;
           </li>
           <li class="footer__list-item">
             <a href="#" class="footer__link">Конструктор</a>
-            <a href="#" class="footer__link">Пользовательское соглашение</a>
+            <a href="privacy.php" class="footer__link">Пользовательское соглашение</a>
           </li>
           <li class="footer__list-item_socials">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

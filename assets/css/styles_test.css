@@ -30,21 +30,57 @@ body {
   background-color: transparent;
 }
 
-h2:hover ~ #cursor {
-  width: 65px;
-  height: 65px;
-  border: 2px solid #f6ad4d;
-  background-color: hsla(34, 90%, 63%, 0.259);
-  animation: animate 5s linear infinite;
+#cursor{
+  border: 2px solid transparent;
 }
 
-@keyframes animate {
-  0% {
-    transform: translate(-50%, -50%) rotate(0 deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360 deg);
-  }
+
+h2:hover ~ #cursor,
+a:hover ~ #cursor {
+  width: 63px;
+  height: 63px;
+  border: 2px solid #f6ad4d;
+  background-color: #f6ad4d;
+  z-index: -1;
+}
+
+h2 {
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  outline: none;
+}
+
+h2:hover {
+  border: 2px solid #f6ad4d;
+  border-radius: 20px;
+  background-color: transparent;
+  transition-property: border;
+  transition: 0.2s;
+}
+
+.chunky {
+  padding: 10px;
+}
+
+a {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  border: 2px solid #f6ad4d;
+  border-radius: 20px;
+  background-color: #f6ad4d;
+  transition-property: border;
+  transition: 0.2s;
+}
+
+a:hover ~ #cursor {
+  width: 35px;
+  height: 35px;
 }
 
 @keyframes ripple-effect {

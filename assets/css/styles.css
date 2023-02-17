@@ -320,7 +320,8 @@ input[name="course_2"]:checked {
 .main__section_achievements .section_achievements__article,
 .main__section_recent-jobs .section_recent-jobs__article,
 .main__section_feedback .section_feedback__article,
-.main__section_options .section_options__article {
+.main__section_options .section_options__article,
+.main__section_privacy .section_privacy__article {
   font-size: 2rem;
   line-height: 2rem;
   margin-bottom: 1.25rem;
@@ -480,4 +481,57 @@ input::-webkit-inner-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+#cursor {
+  z-index: 3;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: 0.1s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.main__section_privacy .section_privacy__article:hover ~ #cursor,
+.section_jumbotron__form .form__button:hover ~ #cursor {
+  width: 63px;
+  height: 63px;
+  /* border: 2px solid #f6ad4d; */
+  background-color: #f6ad4d;
+  z-index: -1;
+}
+
+.section_jumbotron__form .form__button:hover ~ #cursor{
+  width: 56px;
+  height: 56px;;
+}
+
+.main__section_privacy{
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main__section_privacy .section_privacy__article {
+  align-self: center;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  outline: none;
+  margin: 0;
+}
+
+.main__section_privacy .section_privacy__article:hover {
+  /* border: 2px solid #f6ad4d; */
+  background-color: transparent;
+  transition-property: border;
+  transition: 0.2s;
+}
+
+.main__section_privacy .section_privacy__paragraph {
+  text-align: left;
+  justify-content: flex-start;
 }
