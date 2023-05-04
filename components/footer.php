@@ -1,3 +1,4 @@
+
 <footer class="footer">
     <div class="footer__inner">
       <div class="container footer__container">
@@ -30,3 +31,4 @@
       </div>
     </div>
   </footer>
+  <?php ?>

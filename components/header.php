@@ -1,3 +1,4 @@
+<?php ?>
 <header class="header">
   <div class="header__inner">
     <div class="container header__container">
