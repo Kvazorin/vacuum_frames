@@ -1,27 +1,74 @@
-var coll = document.getElementsByClassName("section__collapsible-btn");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("section__collapsible-btn_active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-
-$('.section_recent-jobs__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 3,
-    autoplay: true,
-    variableWidth: true,
-    autoplaySpeed: 3500,
-    prevArrow:'<span class="recent-jobs__slider_prev"></span>',
-    nextArrow: '<span class="recent-jobs__slider_next"></span>',
-    centerMode: true,
-    dots: true
-    
+// Slider settings
+$(".section_recent-jobs__slider").slick({
+  slidesToShow: 1,
+  slidesToScroll: 3,
+  autoplay: true,
+  variableWidth: true,
+  autoplaySpeed: 3500,
+  prevArrow: '<span class="recent-jobs__slider_prev"></span>',
+  nextArrow: '<span class="recent-jobs__slider_next"></span>',
+  centerMode: true,
+  dots: true
 });
+
+$(".section_about__slider").slick({
+  slidesToShow: 5,
+  autoplay: true,
+  variableWidth: true,
+  maxHeight: 1000,
+  autoplaySpeed: 2500,
+  prevArrow: '<span class="recent-jobs__slider_prev"></span>',
+  nextArrow: '<span class="recent-jobs__slider_next"></span>',
+  centerMode: true
+});
+
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+};
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+};
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+};
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+};
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo ");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+};
+
+function openSideMenu() {
+  document.getElementById("sidebar").style.width = "250px";
+};
+
+function closeSideMenu() {
+  document.getElementById("sidebar").style.width = "0";
+};
+
