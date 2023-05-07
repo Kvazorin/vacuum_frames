@@ -8,7 +8,7 @@
             <a href="about.php" class="footer__link">О компании</a>
           </li>
           <li class="footer__list-item">
-            <a href="test.php" class="footer__link">Партнерам</a>
+            <a href="partnership.php" class="footer__link">Партнерам</a>
             <a href="feedback.php" class="footer__link">Обратная связь</a>
           </li>
           <li class="footer__list-item">

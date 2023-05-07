@@ -141,7 +141,9 @@ label:hover {
 
 .main__section_jumbotron .section_jumbotron__article .jumbotron__article_main,
 .main__section_about .section_about__article,
-.main__section_about_slider .section_about__article {
+.main__section_about_slider .section_about__article,
+.main__section_partnership .section_partnership__article,
+.main__section_equipment .section_equipment__article {
   font-size: 2.5rem;
   line-height: 3.5rem;
 }
@@ -236,10 +238,6 @@ a.section_feedback__btn:hover {
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
-.section_feedback-exp__form .form__input {
-  width: 120%;
-}
-
 .input:focus,
 input:focus {
   transition: all 0.6s;
@@ -252,6 +250,26 @@ input:focus {
 
 .section_jumbotron__form .form__textarea {
   resize: none;
+}
+
+/* <--- Credentials Table ---> */
+
+.main__section_partnership .credentials__table {
+  padding: 20px;
+  border-radius: 20px;
+  border: var(--orange-dim) 2px dotted;
+  width: 80%;
+}
+
+.main__section_partnership .credentials__table .table__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--orange-dim) 2px solid;
+}
+
+.credentials__table .table__data-cell {
+  padding: 20px 10px 10px 10px;
 }
 
 /* Designer collapsibles and form */
@@ -408,14 +426,20 @@ input[name="course_2"]:checked {
 
 .main__section_qualities .section_qualities__following,
 .main__section_achievements .section_achievements__following,
-.main__section_feedback .section_feedback__following {
+.main__section_feedback .section_feedback__following,
+.main__section_equipment .section_equipment__following {
   font-size: 1.1rem;
 }
 
 .main__section_achievements .section_achievements__following,
-.main__section_feedback .section_feedback__following {
+.main__section_feedback .section_feedback__following,
+.main__section_equipment .section_equipment__following {
   text-align: center;
   max-width: 50%;
+}
+
+.main__section_equipment .section_equipment__following {
+  max-width: 70%;
 }
 
 .section {
@@ -423,7 +447,7 @@ input[name="course_2"]:checked {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.875rem;
+  gap: 1.5rem;
 }
 
 .main__section_achievements .section_achievements__article,
@@ -431,12 +455,32 @@ input[name="course_2"]:checked {
   margin-bottom: 0;
 }
 
-.main__section_achievements .section_achievements__images {
+.main__section_achievements .section_achievements__images,
+.main__section_equipment .section_equipment__showcase {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 3.125rem;
+}
+
+.main__section_equipment .section_equipment__showcase {
+  flex-wrap: wrap-reverse;
+}
+
+.main__section_equipment .section_equipment__showcase ol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 70%;
+  gap: 1.1rem;
+}
+.main__section_equipment .section_equipment__showcase ol li {
+  font-size: 1.1rem;
+}
+
+.main__section_equipment .section_equipment__showcase img {
+  max-height: 100rem;
 }
 
 .section_achievements__images > .row .column img:hover {
@@ -798,17 +842,30 @@ img.hover-shadow {
   .container {
     max-width: 1280px;
   }
+  .main__section_feedback iframe {
+    width: 1280px;
+  }
 }
 
 @media (max-width: 1330px) {
   .container {
     max-width: 1020px;
   }
+  .main__section_feedback iframe {
+    width: 1020px;
+  }
 }
 
 @media (max-width: 1080px) {
   .container {
     max-width: 960px;
+  }
+  .prev,
+  .next {
+    top: 25%;
+  }
+  .main__section_feedback iframe {
+    width: 960px;
   }
 }
 
@@ -824,9 +881,11 @@ img.hover-shadow {
   .section_jumbotron__form {
     width: 100%;
   }
-
   .main__section_jumbotron .section_jumbotron__form {
     background: rgba(237, 237, 237, 0.95);
+  }
+  .main__section_feedback iframe {
+    width: 850px;
   }
 }
 
@@ -844,13 +903,25 @@ img.hover-shadow {
     gap: 2rem;
   }
 
+  .main__section_partnership .credentials__table {
+    width: 90%;
+  }
+
   .sidebar-menu__btn {
     display: block;
   }
-
   .main__section_achievements .section_achievements__following,
-  .main__section_feedback .section_feedback__following {
+  .main__section_feedback .section_feedback__following,
+  .main__section_equipment .section_equipment__following {
     max-width: 100%;
+  }
+
+  .main__section_equipment .section_equipment__following {
+    text-align: left;
+  }
+
+  .main__section_feedback iframe {
+    width: 650px;
   }
 }
 
@@ -865,19 +936,46 @@ img.hover-shadow {
   .section_qualities__item_1 .section_qualities__subitem_2 {
     display: none;
   }
+
+  .main__section_equipment .section_equipment__showcase img {
+    max-height: 30rem;
+  }
+
+  .main__section_feedback iframe {
+    width: 550px;
+  }
 }
 
 @media (max-width: 620px) {
   .container {
     max-width: 450px;
   }
+  .main__section_feedback iframe {
+    width: 450px;
+  }
+
+  .main__section_equipment .section_equipment__showcase img {
+    max-height: 20rem;
+  }
+
+  .main__section_equipment .section_equipment__showcase {
+    max-width: 80%;
+  }
 }
 @media (max-width: 480px) {
   .container {
     max-width: 350px;
   }
-  .prev,
-  .next {
-    top: 25%;
+  .main__section_feedback iframe {
+    width: 350px;
+  }
+
+  .main__section_equipment .section_equipment__showcase img {
+    max-height: 17rem;
+  } 
+  
+  form input,
+  form textarea {
+    max-width: 90%;
   }
 }

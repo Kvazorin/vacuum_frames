@@ -16,7 +16,7 @@
             <a href="about.php" class="nav__list-link link">О компании</a>
           </li>
           <li class="nav__list-item">
-            <a href="test.php" class="nav__list-link link">Партнерам</a>
+            <a href="partnership.php" class="nav__list-link link">Партнерам</a>
           </li>
           <li class="nav__list-item">
             <a href="desinger.php" class="nav__list-link link">Конструктор</a>
@@ -42,7 +42,7 @@
       <a href="about.php" class="nav__list-link link">О компании</a>
     </li>
     <li class="nav__list-item">
-      <a href="test.php" class="nav__list-link link">Партнерам</a>
+      <a href="partnership.php" class="nav__list-link link">Партнерам</a>
     </li>
     <li class="nav__list-item">
       <a href="desinger.php" class="nav__list-link link">Конструктор</a>
